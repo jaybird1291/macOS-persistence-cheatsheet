@@ -2,9 +2,9 @@
 
 A practical DFIR-focused cheatsheet for identifying, triaging, and reviewing macOS persistence mechanisms. With additional context such as scope, required privilege, source of truth, signal level, false-positive risk and review guidance.
 
-![](image1.png)
+![light theme](image1.png)
 
-![](image2.png)
+![dark theme](image2.png)
 
 ## Features
 
