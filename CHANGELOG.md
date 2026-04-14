@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-This format follows the spirit of Keep a Changelog and Semantic Versioning.
+## [1.2.1] - 2026-04-14
+
+### Summary
+
+- Code cleanup.
 
 ## [1.2.0] - 2026-04-08
 
