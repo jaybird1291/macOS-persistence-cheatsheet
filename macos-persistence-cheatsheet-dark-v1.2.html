@@ -9,9 +9,6 @@
 <style>
   :root {
     --bg: #f4f6fb;
-    --bg2: #ffffff;
-    --bg3: #eef2f8;
-    --bg4: #f9fbff;
     --border: #d7dde8;
     --border-strong: #c7cfdd;
     --shadow: 0 10px 26px rgba(36, 45, 64, 0.06);
@@ -39,22 +36,6 @@
     --slate-fg: #536072;
     --violet-bg: #f1efff;
     --violet-fg: #6257b7;
-    --state-bg:  #eaf8f4;
-    --state-fg:  #256c5f;
-    --state-bd:  #cfe9e1;
-
-    --user-bg:   #f2f5f9;
-    --user-fg:   #516074;
-    --user-bd:   #d9e0ea;
-
-    --admin-bg:  #fff1f4;
-    --admin-fg:  #a94a63;
-    --admin-bd:  #f3d2db;
-
-    --both-bg:   #f3efff;
-    --both-fg:   #5d4fb2;
-    --both-bd:   #ddd4fb;
-
 
     --mono: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -83,14 +64,6 @@
     line-height: 1.58;
   }
 
-  .header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 28px;
-    margin-bottom: 18px;
-  }
-
   h1 {
     font-size: 34px;
     font-weight: 760;
@@ -100,53 +73,12 @@
     line-height: 1.08;
   }
 
-  .sub {
-    font-size: 16px;
-    color: var(--text-soft);
-    max-width: 960px;
-    line-height: 1.75;
-  }
-
-  .priority-box {
-    flex-shrink: 0;
-    min-width: 360px;
-    background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-soft);
-    border-radius: 16px;
-    padding: 18px 20px;
-  }
-
-  .prio-label,
   .legend-title,
   .footer-text {
     font-family: var(--mono);
     font-size: 11px;
     letter-spacing: 0.06em;
     color: var(--text-dim);
-  }
-
-  .prio-label { margin-bottom: 10px; }
-
-  .prio-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 8px 0;
-    font-size: 14px;
-    color: var(--text-soft);
-    border-bottom: 1px solid #edf1f7;
-    line-height: 1.5;
-  }
-  .prio-item:last-child { border-bottom: none; }
-
-  .prio-n {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--blue-fg);
-    width: 18px;
-    flex-shrink: 0;
-    margin-top: 1px;
   }
 
   .view-controls {
@@ -460,19 +392,8 @@
     border-color: #FFD8B2;
   }
 
-  /* Scope */
-  /* .b-mixed {
-    background: #F5F1FF;
-    color: #6A52B3;
-    border-color: #DED4FA;
-  } */
-  
   /* De-emphasize secondary badges */
-  .meta-badges .badge,
-  .legend .b-modern,
-  .legend .b-version,
-  .legend .b-legacy,
-  .legend .b-adjacent {
+  .meta-badges .badge {
     background: var(--slate-bg);
     color: var(--slate-fg);
     border-color: #dde4ee;
@@ -481,31 +402,10 @@
   .b-user,
   .b-mixed,
   .b-system,
-  .b-binary,
-  .b-install,
-  .b-adjacent,
-  .b-modern,
   .b-version,
-  .b-legacy,
   .b-fp-low,
   .b-fp-medium,
-  .b-fp-high,
-  .b-base-critical,
-  .b-base-helpful,
-  .b-base-optional,
-  .b-use-autostart,
-  .b-use-login,
-  .b-use-shell,
-  .b-use-access,
-  .b-use-scheduled,
-  .b-use-event,
-  .b-use-extension,
-  .b-use-interpreter,
-  .b-use-hijack,
-  .b-use-installer,
-  .b-use-session,
-  .b-use-state,
-  .b-use-boot {
+  .b-fp-high {
     background: var(--slate-bg);
     color: var(--slate-fg);
     border-color: #dde4ee;
@@ -752,7 +652,6 @@
     background: #ffffff;
   }
 
-  body[data-density="compact"] .sub { font-size: 15px; line-height: 1.62; }
   body[data-density="compact"] .sec-title { font-size: 18px; }
   body[data-density="compact"] thead th { font-size: 12px; padding: 12px 13px; }
   body[data-density="compact"] tbody td { font-size: 14px; line-height: 1.58; padding: 14px 13px; }
@@ -765,8 +664,6 @@
 
   @media (max-width: 1460px) {
     body { padding: 28px 22px 48px; }
-    .header { flex-direction: column; }
-    .priority-box { min-width: 0; width: 100%; }
     .legend { grid-template-columns: repeat(5, minmax(0, 1fr)); }
     .panels { grid-template-columns: 1fr; }
     .panel-wide { grid-column: span 1; }
@@ -789,8 +686,6 @@
 
 :root {
   --bg: #f6f8fc;
-  --bg2: #ffffff;
-  --bg3: #f2f5fa;
   --border: #d9e1ee;
   --border-strong: #c8d2e3;
   --text: #18202c;
@@ -810,10 +705,8 @@ body {
   padding: 34px 26px 64px;
   background: linear-gradient(180deg, #fbfcfe 0%, var(--bg) 100%);
 }
-.header { gap: 24px; margin-bottom: 22px; }
+.header { margin-bottom: 22px; }
 h1 { font-size: 37px; margin-bottom: 12px; }
-.sub { font-size: 17px; line-height: 1.78; color: var(--text-soft); }
-.priority-box { min-width: 380px; border-radius: 18px; }
 .view-controls {
   position: sticky;
   top: 10px;
@@ -1480,9 +1373,6 @@ body[data-density="compact"] .scan-chip { font-size: 11px; }
 :root {
   color-scheme: dark;
   --bg: #0b1020;
-  --bg2: #11172a;
-  --bg3: #151d33;
-  --bg4: #1a233d;
   --border: #27314a;
   --border-strong: #33405f;
   --shadow: 0 14px 34px rgba(0, 0, 0, 0.42);
@@ -1510,21 +1400,6 @@ body[data-density="compact"] .scan-chip { font-size: 11px; }
   --slate-fg: #b8c5d9;
   --violet-bg: #241d48;
   --violet-fg: #b8a7ff;
-  --state-bg: #123229;
-  --state-fg: #81dbc2;
-  --state-bd: #235948;
-
-  --user-bg: #162132;
-  --user-fg: #b4c6de;
-  --user-bd: #32445e;
-
-  --admin-bg: #331c26;
-  --admin-fg: #ffa1bb;
-  --admin-bd: #5a3140;
-
-  --both-bg: #241d48;
-  --both-fg: #c5b7ff;
-  --both-bd: #473c79;
 }
 
 html, body {
@@ -1535,7 +1410,6 @@ html, body {
 a { color: #9bc0ff; }
 a:hover { color: #c2d8ff; }
 
-.priority-box,
 .legend-card,
 .panel,
 .table-wrap,
@@ -1693,38 +1567,13 @@ code {
 .b-noisy,
 .b-context,
 .meta-badges .badge,
-.legend .b-modern,
-.legend .b-version,
-.legend .b-legacy,
-.legend .b-adjacent,
 .b-user,
 .b-mixed,
 .b-system,
-.b-binary,
-.b-install,
-.b-adjacent,
-.b-modern,
 .b-version,
-.b-legacy,
 .b-fp-low,
 .b-fp-medium,
-.b-fp-high,
-.b-base-critical,
-.b-base-helpful,
-.b-base-optional,
-.b-use-autostart,
-.b-use-login,
-.b-use-shell,
-.b-use-access,
-.b-use-scheduled,
-.b-use-event,
-.b-use-extension,
-.b-use-interpreter,
-.b-use-hijack,
-.b-use-installer,
-.b-use-session,
-.b-use-state,
-.b-use-boot {
+.b-fp-high {
   background: #1b2438 !important;
   color: #b7c4d8 !important;
   border-color: #33405a !important;
@@ -1739,7 +1588,6 @@ code {
 .ioc-item { border-bottom-color: #222c44 !important; }
 .panel-title { border-bottom-color: #24304a !important; }
 .sec-line { background: linear-gradient(90deg, var(--border-strong) 0%, rgba(51,64,95,0) 100%) !important; }
-.prio-item { border-bottom-color: #1f2940 !important; }
 .ioc-dot { background: #ff94a7 !important; }
 
 ::-webkit-scrollbar { height: 12px; width: 12px; }
@@ -1876,7 +1724,6 @@ tbody tr.is-target td:nth-child(2) {
 <div>
 <h1>macOS Persistence Cheatsheet</h1>
 <h4>v1.2 (08/04/2026)</h4>
-<!-- <p class="sub">DFIR artifacts, artifact scope, macOS version applicability, minimum privilege required to establish or modify persistence, false-positive risk, baseline dependence, and review guidance.</p> -->
 </div>
 </div>
 <div class="view-controls">
@@ -2895,7 +2742,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let copied = false;
     try {
       copied = document.execCommand('copy');
-    } catch (error) {}
+    } catch {}
 
     document.body.removeChild(textarea);
     return copied;
@@ -3037,7 +2884,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const group = document.createElement('section');
       group.className = 'scan-group';
       group.setAttribute('data-tone', tone);
-      group.setAttribute('data-source-section', section.id || `scan-section-${sectionIndex + 1}`);
       group.innerHTML = `
         <div class="scan-group-head">
           <div>
@@ -3069,7 +2915,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const card = document.createElement('a');
         card.className = 'scan-card';
         card.href = `#${row.id}`;
-        card.dataset.rowId = row.id;
         card.innerHTML = `
           <div class="scan-card-top">
             <div class="scan-card-name">${escapeHtml(name)}</div>
@@ -3094,7 +2939,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         list.appendChild(card);
-        rowCardPairs.push({ row, card, group });
+        rowCardPairs.push({ row, card });
       });
 
       group.appendChild(list);
@@ -3274,7 +3119,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     try {
       window.localStorage.setItem('macos-cheatsheet-view-controls-collapsed', collapsed ? '1' : '0');
-    } catch (error) {}
+    } catch {}
   }
 
   toggleViewControlsButton?.addEventListener('click', () => {
