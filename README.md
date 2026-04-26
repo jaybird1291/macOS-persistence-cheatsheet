@@ -21,23 +21,27 @@ A practical DFIR-focused cheatsheet for identifying, triaging, and reviewing mac
 
 ## Current version
 
-The current published version is `v1.2.1` dated `2026-04-14`.
+The current published version is `v2.0` dated `2026-04-26`.
 
 Assets currently present in the repository:
 
-- `macos-persistence-cheatsheet-light-v1.2.1.html`
-- `macos-persistence-cheatsheet-dark-v1.2.1.html`
-- `macOS Persistence Cheatsheet Light v1.2.pdf`
-- `macOS Persistence Cheatsheet Dark v1.2.pdf`
+- `macos-persistence-cheatsheet-light-v2.0.html`
+- `macos-persistence-cheatsheet-dark-v2.0.html`
+- `macOS Persistence Cheatsheet Light v2.0.pdf`
+- `macOS Persistence Cheatsheet Dark v2.0.pdf`
 
-### v1.2.1 changelog
+### v2.0 changelog
 
 ### Summary
 
-- Code cleanup.
+- Major public release update from `v1.2.1 (14/04/2026)` to `v2.0 (26/04/2026)`.
+- Expanded the cheatsheet from `39` to `49` mechanisms with `10` new mechanism rows and no removals.
+- Reworked the model from Signal / False Positive Risk scoring toward acquisition-aware DFIR triage.
+- Added a maintainable, JS-generated `Sources & References` bibliography with clickable `[Sx]` references.
 
 ## Version history
 
+- `v1.2.1` (`2026-04-14`): code cleanup
 - `v1.2` (`2026-04-08`): expanded coverage from 31 to 39 mechanisms and refreshed the visual design
 - `v1.1` (`2026-04-08`): UI polish, improved scroll behavior, focus mode cleanup, and overview badge fixes
 - `v1.0` (`2026-04-07`): initial published version
